@@ -4,16 +4,14 @@
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
-    
     #introBlock {
         background-color: $hoofdkleur;
         padding: 100px 40px;
         /*margin-top: 100px;
         margin-bottom: 100px;*/
-        background-color:rgba(38, 70, 83, 0.85);
+        background-color: rgba(38, 70, 83, 0.85);
         text-align: center;
         height: 539px;
-        
         h1 {
             font-family: Oswald;
             color: white;
@@ -24,7 +22,6 @@
             margin: 35px 0px 50px 0px;
         }
     }
-    
     .registerBlock {
         padding: 20px 40px !important;
     }
@@ -32,7 +29,6 @@
 
 .sectionMargin {
     padding: 50px 0px;
-        
     h2 {
         font-family: Oswald;
         color: $hoofdkleur;
@@ -42,14 +38,16 @@
         letter-spacing: 2px;
         margin: 15px 0px 35px 0px;
     }
-    
     a {
         color: $steunkleur !important;
     }
-
     a:hover {
         color: $steunkleur !important;
     }
+}
+
+.pandOverzicht {
+    background-color: $hoofdkleur !important;
 }
 
 #pandenStats {
@@ -57,19 +55,16 @@
     padding: 70px 15px 15px 15px;
     color: $wit;
     display: flex;
-    
     li {
         width: 25%;
         margin: 0;
         padding: 0;
         background-color: $hoofdkleur;
         float: left;
-        
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            
             li:first-child {
                 width: 100%;
                 padding: 25px 25px 0px 25px;
@@ -81,7 +76,6 @@
                 font-weight: bold;
                 letter-spacing: 2px;
             }
-            
             li:last-child {
                 width: 100%;
                 padding: 0px 25px 25px 25px;
