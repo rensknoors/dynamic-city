@@ -23,9 +23,22 @@ body {
     font-size: 30px;
 }
 
+#loginHeader {
+    margin: 20px !important;
+    color: white !important;
+}
+
 h2 {
     font-family: Oswald !important;
 }
+
+#registreerVraag {
+    color: white;
+    a {
+        color: $steunkleur;
+    }
+}
+
 
 button {
     background-color: $steunkleur;

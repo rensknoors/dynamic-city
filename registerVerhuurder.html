@@ -37,10 +37,26 @@
 <main>
     <section id="introSection">
         <div class="container" style="padding: 50px 0px;">
-            <div id="introBlock" class="col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
-                <span class="subTitle">Vind het beste</span>
-                <h1>Pand bij jou in de regio</h1>
-                <button type="button">Lees meer</button>
+            <div id="introBlock" class="registerBlock col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+                <h2 id="loginHeader">Word verhuurder</h2>
+                <form>
+                    <p class="regLabel">Voornaam</p>        <input class="smallInput"  type="text">
+                    <p class="regLabel">Achternaam</p>      <input class="smallInput" type="text">
+                    <p class="regLabel">E-mail adres</p>    <input class="smallInput" type="email">
+                    <p class="regLabel">Geboortedatum</p>   <input class="smallInput" type="date">
+                    <p class="regLabel">Bedrijfsnaam</p>    <input class="smallInput" type="text">
+                    <p class="regLabel">Telefoonnummer</p>  <input class="smallInput" type="text">
+                    <p class="regLabel">Postcode</p>        <input class="smallInput" type="email">
+                    <p class="regLabel">Productgroep</p>    <select class="smallInput" name="productgroep">
+                                                                <option value="Kies een productgroep" disabled selected>Kies een productgroep</option>
+                                                                <option value="ICT">ICT</option>
+                                                                <option value="Sokken">Sokken</option>
+                                                                <option value="Overig">Overig</option>
+                                                            </select>
+                    <p class="regLabel">Wachtwoord</p>      <input class="smallInput" type="password">
+                    <p class="regLabel">Wachtwoord</p>      <input  class="smallInput"type="password">
+                    <input class="button" type="submit" value="Registreren">
+                </form>
             </div>
         </div>
     </section>

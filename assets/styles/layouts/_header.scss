@@ -11,8 +11,15 @@
     padding: 20px 0px;
 }
 
+#loginButton {
+    line-height: 26px !important; 
+    a {
+        color: white !important;
+    }
+}
+
 #headerNav {
-    padding-top: 3%;
+    padding-top: 2%;
     
     ul {
         list-style: none;
@@ -21,6 +28,7 @@
         overflow: hidden;
         float: right;
         font-size: 18px !important;
+        line-height: 52px !important;
         
         li {
             float: left;
