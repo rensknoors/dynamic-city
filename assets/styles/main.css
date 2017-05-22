@@ -1,0 +1,181 @@
+@font-face {
+  font-family: Tahoma;
+  src: url("../../assets/fonts/tahoma.ttf"); }
+@font-face {
+  font-family: RAGE;
+  src: url("../../assets/fonts/RAGE.ttf"); }
+@font-face {
+  font-family: TCCEB;
+  src: url("../../assets/fonts/TCCEB.tff"); }
+body {
+  font-family: Tahoma !important; }
+
+.subTitle {
+  color: #E85C3A;
+  font-family: RAGE;
+  font-size: 30px; }
+
+h2 {
+  font-family: Oswald !important; }
+
+button {
+  background-color: #E85C3A;
+  border: none;
+  color: white !important;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; }
+
+.pandPreviewblok {
+  padding-bottom: 25px; }
+  .pandPreviewblok img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; }
+  .pandPreviewblok ul {
+    list-style: none;
+    padding: 0;
+    background-color: #e9f5f4 !important;
+    padding: 27px; }
+    .pandPreviewblok ul li:first-child {
+      font-family: Oswald !important;
+      text-transform: uppercase;
+      font-size: 25px; }
+    .pandPreviewblok ul li:last-child {
+      padding-top: 20px; }
+    .pandPreviewblok ul .subTitle {
+      font-size: 24px; }
+
+.previewSlider {
+  height: 800px;
+  padding: 100px 0px;
+  color: white;
+  background: linear-gradient(rgba(38, 70, 83, 0.45), rgba(38, 70, 83, 0.45)), url("../../assets/images/maasboulevard.png"); }
+  .previewSlider h3 {
+    font-family: Oswald;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 15px 0px 35px 0px; }
+
+.align-right {
+  text-align: right; }
+
+.padding-bottom-25 {
+  padding-bottom: 25px; }
+
+#headerLogo {
+  max-width: 200px;
+  height: 96px; }
+  #headerLogo img {
+    width: 100%; }
+
+#headerOpmaak {
+  padding: 20px 0px; }
+
+#headerNav {
+  padding-top: 3%; }
+  #headerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    float: right;
+    font-size: 18px !important; }
+    #headerNav ul li {
+      float: left;
+      padding-left: 22px; }
+      #headerNav ul li a {
+        color: #264653; }
+      #headerNav ul li a:hover {
+        text-decoration: none;
+        border-bottom: 3px solid #E85C3A; }
+
+footer {
+  background-color: #264653;
+  padding: 50px 0;
+  color: white;
+  text-align: center; }
+  footer h2 {
+    font-family: Oswald;
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 15px 0px 35px 0px; }
+  footer ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; }
+
+#introSection {
+  background-image: url(../../assets/images/headerImage.png);
+  width: 100%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #introSection #introBlock {
+    background-color: #264653;
+    padding: 140px 40px;
+    /*margin-top: 100px;
+    margin-bottom: 100px;*/
+    background-color: rgba(38, 70, 83, 0.85);
+    text-align: center; }
+    #introSection #introBlock h1 {
+      font-family: Oswald;
+      color: white;
+      font-size: 56px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin: 35px 0px 50px 0px; }
+
+.sectionMargin {
+  padding: 50px 0px; }
+  .sectionMargin h2 {
+    font-family: Oswald;
+    color: #264653;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 15px 0px 35px 0px; }
+  .sectionMargin a {
+    color: #E85C3A !important; }
+  .sectionMargin a:hover {
+    color: #E85C3A !important; }
+
+#pandenStats {
+  list-style: none;
+  padding: 70px 15px 15px 15px;
+  color: white;
+  display: flex; }
+  #pandenStats li {
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    background-color: #264653;
+    float: left; }
+    #pandenStats li ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #pandenStats li ul li:first-child {
+        width: 100%;
+        padding: 25px 25px 0px 25px;
+        border-right: 1px solid white;
+        font-family: Oswald;
+        color: white;
+        font-size: 56px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px; }
+      #pandenStats li ul li:last-child {
+        width: 100%;
+        padding: 0px 25px 25px 25px;
+        border-right: 1px solid white; }
+
+/*# sourceMappingURL=main.css.map */

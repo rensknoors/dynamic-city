@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Tahoma;
+    src: url('../../assets/fonts/tahoma.ttf');
+}
+
+@font-face {
+    font-family: RAGE;
+    src: url('../../assets/fonts/RAGE.ttf');
+}
+
+@font-face {
+    font-family: TCCEB;
+    src: url('../../assets/fonts/TCCEB.tff');
+}
+
+body {
+    font-family: Tahoma !important;
+}
+
+.subTitle {
+    color: $steunkleur;
+    font-family: RAGE;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: Oswald !important;
+}
+
+button {
+    background-color: $steunkleur;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pandPreviewblok {
+    padding-bottom: 25px;
+    
+    img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        background-color: $lichtBlauw !important;
+        padding: 27px;
+        
+        li:first-child {
+            font-family: Oswald !important;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+        
+        li:last-child {
+            padding-top: 20px;
+        }
+        
+        .subTitle {
+            font-size: 24px;
+        }
+    }
+}
+
+.previewSlider {
+    height: 800px;
+    padding: 100px 0px;
+    color: white;
+    background: 
+    linear-gradient(
+      rgba(38, 70, 83, 0.45), 
+      rgba(38, 70, 83, 0.45)
+    ),
+    url('../../assets/images/maasboulevard.png');
+    
+    h3 {
+        font-family: Oswald;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 15px 0px 35px 0px;
+    }
+}

@@ -1,0 +1,39 @@
+#headerLogo {
+    max-width: 200px;
+    height: 96px;
+    
+    img {
+        width: 100%;
+    }
+}
+
+#headerOpmaak {
+    padding: 20px 0px;
+}
+
+#headerNav {
+    padding-top: 3%;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        float: right;
+        font-size: 18px !important;
+        
+        li {
+            float: left;
+            padding-left: 22px;
+            
+            a {
+                color: $hoofdkleur;
+            }
+            
+            a:hover {
+                text-decoration: none;
+                border-bottom: 3px solid $steunkleur;
+            }
+        }
+    }
+}
