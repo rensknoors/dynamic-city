@@ -41,10 +41,10 @@
         <div class="pandBackground">
             <img src="assets/images/venlo.png">
         </div>
-        <section id="introSection">
+        <section id="introSection" style="background-image: none !important;">
             <div class="container" style="padding: 50px 0px;">
                 <div id="pandInfoBlok" class="col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
-                    <h1>Kerkstraat 12</h1>
+                    <h1>Kerkstraat 12 - Venlo</h1>
                     <img src="assets/images/venlo.png">
                     <h3>Omschrijving</h3>
                     <p>Een mooi pand waar 5 personen zich kunnen vestigen</p>
@@ -61,10 +61,15 @@
             <div class="container">
                 <div class="row">
                     <div class="padding-bottom-25 col-md-5 col-sm-8 col-xs-12">
-                        <span class="subTitle">Bekijk het overzicht van</span>
-                        <h2>Huur direct een</br>pand in de regio</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                        <a>Lees meer</a>
+                        <h2 class="pandInfoH2">Interesse? Maak dan snel een afspraak!</h2>
+                        <form>
+                            <label class="huurLabel">Start huurperiode</label>
+                            <input class="huurDate" name="eindDatum" type="date">
+                            <label class="huurLabel">Eind huurperiode</label>
+                            <input class="huurDate" name="eindDatum" type="date">
+                            <input class="huurButton" type="submit" value="Huur dit pand!">
+                            <button class="huurVraagButton">Stel een vraag</button>
+                        </form>
                     </div>
                     <figure class="align-right col-md-offset-1 col-md-6 col-sm-8 col-xs-12"><img src="assets/images/afbeeldingpand.png"></figure>
                 </div>
