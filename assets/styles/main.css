@@ -88,6 +88,46 @@ option {
 [type="date"]::-webkit-inner-spin-button {
   display: none; }
 
+/** Checkbox **/
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 20px;
+  height: 15px;
+  display: inline-block;
+  line-height: 15px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer; }
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -15px; }
+
+.zoekPlaats {
+  width: 60% !important;
+  float: left;
+  margin-right: 0 !important;
+  margin-left: 24px !important; }
+
+.zoekAfstand {
+  width: 30% !important;
+  margin-left: 1px !important;
+  float: left;
+  height: 50px !important; }
+
+.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/lite-orange-check.png); }
+
 .button {
   margin-top: 20px !important;
   width: 90%;
