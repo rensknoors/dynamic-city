@@ -22,37 +22,36 @@ option {
     display: none;
 }
 
-[type="date"]::-webkit-calendar-picker-indicator {
+[type="date"]::-webkit-calendar-picker-indicator {}
 
-}
 
 /** Checkbox **/
 
 input[type=checkbox].css-checkbox {
-	  position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height:1px; 
-    width:1px; 
-    margin:-1px; 
-    padding:0;
-    border:0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
 }
 
-input[type=checkbox].css-checkbox + label.css-label {
-	padding-left:20px;
-	height:15px; 
-	display:inline-block;
-	line-height:15px;
-	background-repeat:no-repeat;
-	background-position: 0 0;
-	font-size:15px;
-	vertical-align:middle;
-	cursor:pointer;
+input[type=checkbox].css-checkbox+label.css-label {
+    padding-left: 20px;
+    height: 15px;
+    display: inline-block;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-input[type=checkbox].css-checkbox:checked + label.css-label {
-	background-position: 0 -15px;
+input[type=checkbox].css-checkbox:checked+label.css-label {
+    background-position: 0 -15px;
 }
 
 .zoekPlaats {
@@ -62,16 +61,18 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     margin-left: 24px !important;
 }
 
-.zoekAfstand {
+.zoekButton {
     width: 30% !important;
     margin-left: 1px !important;
     float: left;
     height: 50px !important;
-    
+    background-color: $steunkleur;
+    color: white !important;
+    font-size: 14px;
 }
 
-.css-label{
-	background-image:url(http://csscheckbox.com/checkboxes/lite-orange-check.png);
+.css-label {
+    background-image: url(http://csscheckbox.com/checkboxes/lite-orange-check.png);
 }
 
 .button {
