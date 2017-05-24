@@ -1,7 +1,6 @@
 #headerLogo {
     max-width: 450px;
     height: 96px;
-    
     img {
         width: 100%;
     }
@@ -12,7 +11,7 @@
 }
 
 #loginButton {
-    line-height: 26px !important; 
+    line-height: 26px !important;
     a {
         color: white !important;
     }
@@ -20,7 +19,6 @@
 
 #headerNav {
     padding-top: 2%;
-    
     ul {
         list-style: none;
         padding: 0;
@@ -29,18 +27,37 @@
         float: right;
         font-size: 18px !important;
         line-height: 52px !important;
-        
         li {
             float: left;
             padding-left: 22px;
-            
             a {
                 color: $hoofdkleur;
             }
-            
             a:hover {
                 text-decoration: none;
                 border-bottom: 3px solid $steunkleur;
+            }
+            img {
+                height: 52px;
+                border-radius: 50%;
+                padding-left: 5px;
+            }
+            #userMenu {
+                background-color: white;
+                display: none;
+                position: absolute;
+                width: 150px;
+                z-index: 2;
+                box-shadow: 5px 5px 10px #333;
+                li {
+                    float: left;
+                    font-size: 14px;
+                }
+            }
+        }
+        li:hover {
+            #userMenu {
+                display: block;
             }
         }
     }

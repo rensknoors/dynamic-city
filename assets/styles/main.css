@@ -231,6 +231,22 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
       #headerNav ul li a:hover {
         text-decoration: none;
         border-bottom: 3px solid #E85C3A; }
+      #headerNav ul li img {
+        height: 52px;
+        border-radius: 50%;
+        padding-left: 5px; }
+      #headerNav ul li #userMenu {
+        background-color: white;
+        display: none;
+        position: absolute;
+        width: 150px;
+        z-index: 2;
+        box-shadow: 5px 5px 10px #333; }
+        #headerNav ul li #userMenu li {
+          float: left;
+          font-size: 14px; }
+    #headerNav ul li:hover #userMenu {
+      display: block; }
 
 footer {
   background-color: #264653;
