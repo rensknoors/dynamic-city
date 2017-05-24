@@ -40,7 +40,7 @@
             img {
                 height: 52px;
                 border-radius: 50%;
-                padding-left: 5px;
+                margin-left: 5px;
             }
             #userMenu {
                 background-color: white;
@@ -50,8 +50,17 @@
                 z-index: 2;
                 box-shadow: 5px 5px 10px #333;
                 li {
+                    display:inline-block;
+                    
                     float: left;
                     font-size: 14px;
+                    width: 100%;
+                }
+                li:hover{
+                    background-color: $steunkleur;
+                    a{
+                        color: white;
+                    }
                 }
             }
         }

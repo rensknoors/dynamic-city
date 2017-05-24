@@ -234,7 +234,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
       #headerNav ul li img {
         height: 52px;
         border-radius: 50%;
-        padding-left: 5px; }
+        margin-left: 5px; }
       #headerNav ul li #userMenu {
         background-color: white;
         display: none;
@@ -243,8 +243,14 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         z-index: 2;
         box-shadow: 5px 5px 10px #333; }
         #headerNav ul li #userMenu li {
+          display: inline-block;
           float: left;
-          font-size: 14px; }
+          font-size: 14px;
+          width: 100%; }
+        #headerNav ul li #userMenu li:hover {
+          background-color: #E85C3A; }
+          #headerNav ul li #userMenu li:hover a {
+            color: white; }
     #headerNav ul li:hover #userMenu {
       display: block; }
 
