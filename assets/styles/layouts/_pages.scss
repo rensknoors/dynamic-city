@@ -1,22 +1,71 @@
 /** Popup question **/
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
+#vraagPopup {
+    height: 450px;
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    top: 100px;
+    left: 50%;
+    margin-left: -200px;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+    h3{
+        margin-top: 5px;
+    }
+    input{
+        border: 1px solid lightgrey;
+        margin: 0 !important;
+        margin-left: 17px !important;
+        width: 90% !important;
+    }
+    
+    .huurVraagButton{
+        color: white !important;    
+    }
+}
 
+#vraagText {
+    position: relative;
+    margin-left: 17px;
+    margin-top: 5px;
+    margin-bottm: 5px;
+    width: 90%;
+    height: 250px;
+}
+
+#vraagPopup:target,
+#vraagPopup:target+#cover {
+    display: block;
+    opacity: 2;
+}
+
+.cancel {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    color: black;
+    height: 30px;
+    width: 35px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+}
 
 #introSection {
     background-image: url(../../assets/images/headerImage.png);
