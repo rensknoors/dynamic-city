@@ -40,6 +40,18 @@
         <div class="pandBackground">
             <img src="assets/images/venlo.png">
         </div>
+        <div id="vraagPopup" class="overlay">
+            <div class="popup">
+                <h2>Here i am</h2>
+                <form>
+                    <input type="text">
+                </form>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+            </div>
+        </div>
         <section id="introSection" style="background-image: none !important;">
             <div class="container" style="padding: 50px 0px;">
                 <div id="pandInfoBlok" class="col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
@@ -53,6 +65,8 @@
                     <p>Vrij</p>
                     <h3>Aantal plekken</h3>
                     <p>4 plekken vrij</p>
+                    <h3>Prijs</h3>
+                    <p>€300 per maand</p>
                 </div>
             </div>
         </section>
@@ -69,8 +83,9 @@
                             <input type="checkbox" id="checkbox2" class="css-checkbox" checked="checked" />
                             <label for="checkbox2" name="checkbox2_lbl" class="css-label lite-orange-check">Ik ga akkoord met de <a href="#">voorwaarden</a> van Dynamic City.</label>
                             <input class="huurButton" type="submit" value="Huur dit pand!">
-                            <button class="huurVraagButton">Stel een vraag</button>
+                            
                         </form>
+                        <a class="vraagLink"><button class="huurVraagButton">Stel een vraag</button></a>
                     </div>
                     <figure class="align-right col-md-offset-1 col-md-6 col-sm-8 col-xs-12"><img src="assets/images/afbeeldingpand.png"></figure>
                 </div>
