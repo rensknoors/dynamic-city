@@ -138,6 +138,24 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
   color: white !important;
   font-size: 14px; }
 
+.acceptHuur {
+  position: relative;
+  display: inline-block;
+  background-color: #2A9D8F !important; }
+
+.denyHuur {
+  position: relative;
+  display: inline-block; }
+
+.huurAccepted {
+  background-color: lightgrey; }
+
+.huurData button {
+  height: 59px; }
+
+.huurData li:last-child {
+  text-align: right; }
+
 .inputDesc {
   margin: 0;
   padding: 0;
