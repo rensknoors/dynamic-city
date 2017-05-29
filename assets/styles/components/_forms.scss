@@ -10,7 +10,10 @@ option {
     display: inline-block;
     width: 90%;
 }
-
+input[type=file] {
+    background-color: white;
+    height: 30px !important;
+}
 
 /** Datepicker **/
 
@@ -81,6 +84,28 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     background-color: $steunkleur;
     color: white !important;
     font-size: 14px;
+}
+
+.acceptHuur {
+    position: relative;
+    display: inline-block;
+    background-color: $jungleGreen !important;
+}
+
+.denyHuur {
+    position: relative;
+    display: inline-block;
+}
+
+.huurAccepted {
+    background-color: lightgrey;
+}
+
+.huurData button{
+    height: 59px;
+}
+.huurData li:last-child{
+    text-align:right;
 }
 
 .inputDesc {
