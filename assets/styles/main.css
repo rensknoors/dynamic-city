@@ -69,6 +69,12 @@ button {
     letter-spacing: 2px;
     margin: 15px 0px 35px 0px; }
 
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 20px; }
+
 input,
 select,
 option {
@@ -257,8 +263,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 footer {
   background-color: #264653;
   padding: 50px 0;
-  color: white;
-  text-align: center; }
+  color: white; }
   footer h2 {
     font-family: Oswald;
     color: white;
@@ -271,6 +276,36 @@ footer {
     list-style: none;
     padding: 0;
     display: inline-block; }
+
+.footerMenu {
+  list-style: none;
+  min-width: 190px; }
+  .footerMenu li {
+    text-align: left; }
+  .footerMenu i.adres {
+    margin-right: 5px;
+    display: inline-block;
+    width: 25px;
+    min-height: 1px;
+    padding-top: 5px; }
+  .footerMenu i.social {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    text-align: center;
+    font-size: 23px;
+    float: left;
+    padding-top: 9px; }
+  .footerMenu li:first-child {
+    font-size: 22px; }
+  .footerMenu li:first-child:after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    display: block;
+    background-color: white;
+    margin-top: 6px;
+    margin-bottom: 4px; }
 
 /** Popup question **/
 .overlay {
@@ -296,7 +331,7 @@ footer {
   background-repeat: no-repeat; }
   #introSection #introBlock {
     background-color: #264653;
-    padding: 100px 40px;
+    padding: 90px 40px;
     /*margin-top: 100px;
     margin-bottom: 100px;*/
     background-color: rgba(38, 70, 83, 0.85);
@@ -432,5 +467,16 @@ footer {
         width: 100%;
         padding: 0px 25px 25px 25px;
         border-right: 1px solid white; }
+
+#USPlist {
+  list-style: none;
+  padding: 0; }
+  #USPlist li {
+    line-height: 31px; }
+    #USPlist li i {
+      color: #264653;
+      font-size: 20px; }
+  #USPlist li:last-child {
+    padding-bottom: 20px; }
 
 /*# sourceMappingURL=main.css.map */

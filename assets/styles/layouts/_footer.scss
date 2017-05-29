@@ -2,7 +2,6 @@ footer {
     background-color: $hoofdkleur;
     padding: 50px 0;
     color: $wit;
-    text-align: center;
     
     h2 {
         font-family: Oswald;
@@ -18,5 +17,46 @@ footer {
         list-style: none;
         padding: 0;
         display: inline-block;
+    }
+}
+
+.footerMenu {
+    list-style: none;
+    min-width: 190px;
+    
+    li {
+        text-align: left;
+    }
+    
+    i.adres {
+        margin-right: 5px;
+        display: inline-block;
+        width: 25px;
+        min-height: 1px;
+        padding-top: 5px;
+    }
+    
+    i.social {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        text-align: center;
+        font-size: 23px;
+        float: left;
+        padding-top: 9px;
+    }
+    
+    li:first-child {
+        font-size: 22px;
+    }
+    
+    li:first-child:after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        display: block;
+        background-color: $wit;
+        margin-top: 6px;
+        margin-bottom: 4px;
     }
 }

@@ -26,7 +26,7 @@
     background-repeat: no-repeat;
     #introBlock {
         background-color: $hoofdkleur;
-        padding: 100px 40px;
+        padding: 90px 40px;
         /*margin-top: 100px;
         margin-bottom: 100px;*/
         background-color: rgba(38, 70, 83, 0.85);
@@ -186,5 +186,23 @@
                 border-right: 1px solid white;
             }
         }
+    }
+}
+
+#USPlist {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        line-height: 31px;
+        
+        i {
+            color: $hoofdkleur;
+            font-size: 20px;
+        }
+    }
+    
+    li:last-child {
+        padding-bottom: 20px;
     }
 }
