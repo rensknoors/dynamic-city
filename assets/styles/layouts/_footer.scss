@@ -39,11 +39,18 @@ footer {
     i.social {
         width: 40px;
         height: 40px;
-        background-color: red;
+        background-color: $steunkleur;
         text-align: center;
         font-size: 23px;
         float: left;
         padding-top: 9px;
+        margin-right: 5px;
+        -webkit-transition: background-color 0.4s; /* Safari */
+        transition: background-color 0.4s;
+    }
+    
+    i.social:hover {
+        background-color: $jungleGreen;
     }
     
     li:first-child {
@@ -57,6 +64,6 @@ footer {
         display: block;
         background-color: $wit;
         margin-top: 6px;
-        margin-bottom: 4px;
+        margin-bottom: 12px;
     }
 }

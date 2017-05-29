@@ -359,11 +359,17 @@ footer {
   .footerMenu i.social {
     width: 40px;
     height: 40px;
-    background-color: red;
+    background-color: #E85C3A;
     text-align: center;
     font-size: 23px;
     float: left;
-    padding-top: 9px; }
+    padding-top: 9px;
+    margin-right: 5px;
+    -webkit-transition: background-color 0.4s;
+    /* Safari */
+    transition: background-color 0.4s; }
+  .footerMenu i.social:hover {
+    background-color: #2A9D8F; }
   .footerMenu li:first-child {
     font-size: 22px; }
   .footerMenu li:first-child:after {
@@ -373,7 +379,7 @@ footer {
     display: block;
     background-color: white;
     margin-top: 6px;
-    margin-bottom: 4px; }
+    margin-bottom: 12px; }
 
 /** Popup question **/
 #cover {
