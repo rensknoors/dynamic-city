@@ -81,6 +81,10 @@ option {
   display: inline-block;
   width: 90%; }
 
+input[type=file] {
+  background-color: white;
+  height: 30px !important; }
+
 /** Datepicker **/
 [type="date"] {
   background: #fff url(../images/cal.png) 97% 50% no-repeat; }
