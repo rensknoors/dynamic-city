@@ -10,6 +10,9 @@
 body {
   font-family: Tahoma !important; }
 
+.right {
+  float: right; }
+
 .subTitle {
   color: #E85C3A;
   font-family: RAGE;
@@ -35,6 +38,21 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block; }
+  button i {
+    margin-left: -5px !important;
+    margin-right: 10px; }
+
+.container {
+  position: relative; }
+  .container .btn-row {
+    padding-bottom: 30px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 15px; }
+    .container .btn-row .btn-add {
+      margin-right: 15px; }
 
 .pandPreviewblok {
   padding-bottom: 25px; }
@@ -46,7 +64,9 @@ button {
     list-style: none;
     padding: 0;
     background-color: #e9f5f4 !important;
-    padding: 27px; }
+    padding: 27px;
+    position: relative;
+    overflow: hidden; }
     .pandPreviewblok ul li:first-child {
       font-family: Oswald !important;
       text-transform: uppercase;
@@ -55,6 +75,32 @@ button {
       padding-top: 20px; }
     .pandPreviewblok ul .subTitle {
       font-size: 24px; }
+    .pandPreviewblok ul .cover {
+      position: absolute;
+      height: 60px;
+      width: 100%;
+      padding: 0 !important;
+      bottom: -200px;
+      left: 0;
+      transition: bottom 0.25s ease-out;
+      background: rgba(38, 70, 83, 0.85); }
+      .pandPreviewblok ul .cover .actions {
+        width: 100%;
+        height: 100%; }
+        .pandPreviewblok ul .cover .actions .center {
+          margin: 0 auto;
+          padding: 15px 0;
+          width: 80px; }
+        .pandPreviewblok ul .cover .actions i {
+          font-size: 24px;
+          color: #fff;
+          padding: 0 10px;
+          text-align: center;
+          margin: 0 auto; }
+
+.pandPreviewblok:hover ul .cover {
+  bottom: 0;
+  transition: bottom 0.25s ease-out; }
 
 .previewSlider {
   height: 800px;
@@ -80,6 +126,10 @@ option {
   text-decoration: none;
   display: inline-block;
   width: 90%; }
+
+input[type=file] {
+  background-color: white;
+  height: 30px !important; }
 
 /** Datepicker **/
 [type="date"] {
@@ -291,20 +341,64 @@ footer {
     display: inline-block; }
 
 /** Popup question **/
-.overlay {
+#cover {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0; }
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none; }
 
-.overlay:target {
-  visibility: visible;
-  opacity: 1; }
+#vraagPopup {
+  height: 450px;
+  width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+  top: 100px;
+  left: 50%;
+  margin-left: -200px;
+  position: fixed;
+  z-index: 10;
+  display: none;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center; }
+  #vraagPopup h3 {
+    margin-top: 5px; }
+  #vraagPopup input {
+    border: 1px solid lightgrey;
+    margin: 0 !important;
+    margin-left: 17px !important;
+    width: 90% !important; }
+  #vraagPopup .huurVraagButton {
+    color: white !important; }
+
+#vraagText {
+  position: relative;
+  margin-left: 17px;
+  margin-top: 5px;
+  margin-bottm: 5px;
+  width: 90%;
+  height: 250px; }
+
+#vraagPopup:target,
+#vraagPopup:target + #cover {
+  display: block;
+  opacity: 2; }
+
+.cancel {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  color: black;
+  height: 30px;
+  width: 35px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center; }
 
 #introSection {
   background-image: url(../../assets/images/headerImage.png);
