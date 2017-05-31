@@ -80,7 +80,7 @@
         margin-bottom: 100px;*/
         background-color: rgba(38, 70, 83, 0.85);
         text-align: center;
-        height: 539px;
+        min-height: 539px;
         h1 {
             font-family: Oswald;
             color: white;
@@ -235,6 +235,20 @@
                 border-right: 1px solid white;
             }
         }
+    }
+}
+
+//tablet
+@media only screen and (max-width : 768px) {
+    #pandenStats {
+        display: none;
+    }
+}
+
+// Mobile
+@media only screen and (max-width : 480px) {
+    #pandenStats {
+        display: none;
     }
 }
 

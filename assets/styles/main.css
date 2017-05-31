@@ -121,6 +121,9 @@ button {
   margin: 0;
   padding-bottom: 20px; }
 
+.img-width-100 img {
+  width: 100%; }
+
 input,
 select,
 option {
@@ -454,7 +457,7 @@ footer {
     margin-bottom: 100px;*/
     background-color: rgba(38, 70, 83, 0.85);
     text-align: center;
-    height: 539px; }
+    min-height: 539px; }
     #introSection #introBlock h1 {
       font-family: Oswald;
       color: white;
@@ -586,6 +589,12 @@ footer {
         padding: 0px 25px 25px 25px;
         border-right: 1px solid white; }
 
+@media only screen and (max-width: 768px) {
+  #pandenStats {
+    display: none; } }
+@media only screen and (max-width: 480px) {
+  #pandenStats {
+    display: none; } }
 #USPlist {
   list-style: none;
   padding: 0; }
