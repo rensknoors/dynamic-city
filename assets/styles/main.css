@@ -529,7 +529,7 @@ footer {
       margin-bottom: 100px;*/
   background-color: rgba(38, 70, 83, 0.85);
   text-align: center;
-  height: 300px; }
+  min-height: 300px; }
   #pandZoekBlok h1 {
     font-family: Oswald;
     color: white;
@@ -548,6 +548,14 @@ footer {
     width: 50%;
     float: right; }
 
+@media only screen and (max-width: 768px) {
+  #pandZoekBlok {
+    padding: 20px 40px 55px 20px; } }
+@media only screen and (max-width: 480px) {
+  #pandZoekBlok {
+    padding: 20px 40px; }
+    #pandZoekBlok h1 {
+      font-size: 40px; } }
 .sectionMargin {
   padding: 50px 0px; }
   .sectionMargin h2 {
