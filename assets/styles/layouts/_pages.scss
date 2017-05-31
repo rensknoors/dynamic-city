@@ -96,6 +96,14 @@
     }
 }
 
+@media only screen and (max-width : 480px) {
+    #introBlock {
+        h1 {
+            font-size: 48px !important;
+        }
+    }
+}
+
 .pandBackground {
     position: absolute;
     left: 0;
@@ -189,7 +197,7 @@
 
 @media only screen and (max-width : 480px) {
     #pandZoekBlok {
-        padding: 20px 40px;
+        padding: 20px 40px 55px 40px;
         
         h1 {
             font-size: 40px;

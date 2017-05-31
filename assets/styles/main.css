@@ -187,6 +187,21 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
   color: white !important;
   font-size: 14px; }
 
+@media only screen and (max-width: 480px) {
+  .zoekPlaats {
+    width: 97% !important;
+    float: left;
+    margin-right: 0 !important;
+    margin-left: 0px !important; }
+
+  .zoekButton {
+    width: 97% !important;
+    margin-left: 0px !important;
+    float: left;
+    height: 50px !important;
+    background-color: #E85C3A;
+    color: white !important;
+    font-size: 14px; } }
 .css-label {
   background-image: url(http://csscheckbox.com/checkboxes/lite-orange-check.png); }
 
@@ -475,6 +490,9 @@ footer {
   #introSection .registerBlock {
     padding: 20px 40px !important; }
 
+@media only screen and (max-width: 480px) {
+  #introBlock h1 {
+    font-size: 48px !important; } }
 .pandBackground {
   position: absolute;
   left: 0;
@@ -553,7 +571,7 @@ footer {
     padding: 20px 40px 55px 20px; } }
 @media only screen and (max-width: 480px) {
   #pandZoekBlok {
-    padding: 20px 40px; }
+    padding: 20px 40px 55px 40px; }
     #pandZoekBlok h1 {
       font-size: 40px; } }
 .sectionMargin {
