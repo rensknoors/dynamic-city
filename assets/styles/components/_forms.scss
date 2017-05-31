@@ -169,3 +169,9 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     padding: 5px !important;
     font-size: 12px;
 }
+
+@media only screen and (max-width : 480px) {
+    .smallInput {
+        width: 100%;
+    }
+}
