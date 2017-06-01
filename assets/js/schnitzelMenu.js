@@ -1,13 +1,13 @@
 function showMenu() {
     $('#schnitzelMenu').removeClass('closed');  
     $('#schnitzelMenu').addClass('opened');
-    $('#schnitzelMenu').find('img').attr('src', 'assets/images/icons/close.svg');
+    $('#schnitzelMenu').find('img').attr('src', '/assets/images/icons/close.svg');
 }
 
 function hideMenu() {
     $('#schnitzelMenu').removeClass('opened');
     $('#schnitzelMenu').addClass('closed');
-    $('#schnitzelMenu').find('img').attr('src', 'assets/images/icons/schnitzel.svg');
+    $('#schnitzelMenu').find('img').attr('src', '/assets/images/icons/schnitzel.svg');
 }
 
 $('#schnitzelMenu').click( function() {
