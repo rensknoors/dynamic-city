@@ -7,6 +7,9 @@
 @font-face {
   font-family: TCCEB;
   src: url("../../assets/fonts/TCCEB.tff"); }
+html, body {
+  overflow-x: hidden; }
+
 body {
   font-family: Tahoma !important; }
 
@@ -17,6 +20,9 @@ body {
   color: #E85C3A;
   font-family: RAGE;
   font-size: 30px; }
+
+img {
+  max-width: 100%; }
 
 #loginHeader {
   margin: 20px !important;
@@ -42,16 +48,16 @@ button {
     margin-left: -5px !important;
     margin-right: 10px; }
 
-.container {
+main .container {
   position: relative; }
-  .container .btn-row {
+  main .container .btn-row {
     padding-bottom: 30px;
     width: 100%;
     position: absolute;
     z-index: 1;
     top: 15px;
     right: 15px; }
-    .container .btn-row .btn-add {
+    main .container .btn-row .btn-add {
       margin-right: 15px; }
 
 .pandPreviewblok {
@@ -93,7 +99,7 @@ button {
           width: 80px; }
         .pandPreviewblok ul .cover .actions i {
           font-size: 24px;
-          color: #fff;
+          color: white;
           padding: 0 10px;
           text-align: center;
           margin: 0 auto; }
@@ -280,7 +286,10 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     width: 100%; }
 
 #headerOpmaak {
-  padding: 20px 0px; }
+  padding: 20px 0px;
+  position: relative;
+  background: white;
+  z-index: 1; }
 
 #loginButton {
   line-height: 26px !important; }
@@ -328,6 +337,58 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     #headerNav ul li:hover #userMenu {
       display: block; }
 
+#schnitzelMenu {
+  display: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer; }
+
+@media only screen and (max-width: 768px) {
+  #headerLogo {
+    max-width: 70%;
+    height: auto;
+    max-height: 96px; } }
+@media only screen and (max-width: 992px) {
+  main {
+    margin-top: 90px; }
+
+  #headerOpmaak {
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out; }
+    #headerOpmaak #headerLogo {
+      max-height: 50px;
+      width: auto; }
+    #headerOpmaak #headerNav {
+      background: white;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 90px;
+      z-index: -1;
+      transition: right 0.5s ease-out; }
+      #headerOpmaak #headerNav ul {
+        float: none; }
+        #headerOpmaak #headerNav ul li {
+          float: none; }
+    #headerOpmaak #headerNav.enabled {
+      right: 0; }
+    #headerOpmaak #schnitzelMenu {
+      display: block;
+      position: absolute;
+      top: 45px;
+      right: 20px;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    #headerOpmaak #schnitzelMenu.opened {
+      position: fixed; }
+
+  .nav-up {
+    top: -90px !important; } }
 footer {
   background-color: #264653;
   padding: 50px 0;

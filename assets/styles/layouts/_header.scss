@@ -8,6 +8,9 @@
 
 #headerOpmaak {
     padding: 20px 0px;
+    position: relative;
+    background: $wit;
+    z-index: 1;
 }
 
 #loginButton {
@@ -50,15 +53,14 @@
                 z-index: 2;
                 box-shadow: 5px 5px 10px #333;
                 li {
-                    display:inline-block;
-                    
+                    display: inline-block;
                     float: left;
                     font-size: 14px;
                     width: 100%;
                 }
-                li:hover{
+                li:hover {
                     background-color: $steunkleur;
-                    a{
+                    a {
                         color: white;
                     }
                 }
@@ -71,3 +73,75 @@
         }
     }
 }
+
+#schnitzelMenu {
+    display: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width: 768px) {
+    #headerLogo {
+        max-width: 70%;
+        height: auto;
+        max-height: 96px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    main {
+        margin-top: 90px;
+    }
+    
+    #headerOpmaak {
+//        border-bottom: 2px solid $steunkleur;
+        height: 90px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        transition: top 0.2s ease-in-out;
+        #headerLogo {
+            max-height: 50px;
+            width: auto;
+        }
+        #headerNav {
+            background: $wit;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 90px;
+            z-index: -1;
+            transition: right 0.5s ease-out;
+            ul {
+                float: none;
+                li {
+                    float: none;
+                }
+            }
+        }
+        #headerNav.enabled {
+            right: 0;
+        }
+        #schnitzelMenu {
+            display: block;
+            position: absolute;
+            top: 45px;
+            right: 20px;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        #schnitzelMenu.opened {
+            position: fixed;
+        }
+    }
+    .nav-up {
+        top: -90px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {}

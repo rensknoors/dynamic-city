@@ -15,6 +15,10 @@
     src: url('../../assets/fonts/TCCEB.tff');
 }
 
+html, body {
+  overflow-x:hidden;
+}
+
 body {
     font-family: Tahoma !important;
 }
@@ -27,6 +31,10 @@ body {
     color: $steunkleur;
     font-family: RAGE;
     font-size: 30px;
+}
+
+img {
+    max-width: 100%;
 }
 
 #loginHeader {
@@ -61,19 +69,21 @@ button {
     }
 }
 
-.container {
-    position: relative;
-    
-    .btn-row {
-        padding-bottom: 30px;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 15px;
-        right: 15px;
+main {
+    .container {
+        position: relative;
 
-        .btn-add {
-            margin-right: 15px;
+        .btn-row {
+            padding-bottom: 30px;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 15px;
+            right: 15px;
+
+            .btn-add {
+                margin-right: 15px;
+            }
         }
     }
 }
@@ -131,7 +141,7 @@ button {
                 
                 i {
                     font-size: 24px;
-                    color: #fff;
+                    color: $wit;
                     padding: 0 10px;
                     text-align: center;
                     margin: 0 auto;
@@ -176,4 +186,20 @@ button {
     padding: 0;
     margin: 0;
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width : 1200px) {
+    
 }
