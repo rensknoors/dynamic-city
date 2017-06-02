@@ -304,6 +304,9 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
   display: inline-block;
   line-height: 30px; }
 
+@media only screen and (max-width: 480px) {
+  .regLabel {
+    width: 100%; } }
 .smallInput {
   height: 24px !important;
   width: 60%;
