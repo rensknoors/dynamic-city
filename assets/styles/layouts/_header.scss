@@ -62,7 +62,7 @@
             }
         }
         #user {
-            background: $steunkleur;
+            background: $hoofdkleur;
             color: #fff;
             padding-right: 52px;
             width: auto;
@@ -73,6 +73,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                padding-right: 10px;
             }
             #userMenu {
                 background-color: white;
