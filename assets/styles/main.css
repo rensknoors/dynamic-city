@@ -103,6 +103,8 @@ main .container {
           padding: 0 10px;
           text-align: center;
           margin: 0 auto; }
+        .pandPreviewblok ul .cover .actions .deleteFavorite {
+          padding: 0 30px; }
 
 .pandPreviewblok:hover ul .cover {
   bottom: 0;
@@ -386,7 +388,8 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
       #headerNav ul #user p {
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap; }
+        white-space: nowrap;
+        padding-right: 10px; }
       #headerNav ul #user #userMenu {
         background-color: #2A9D8F;
         position: absolute;
@@ -676,7 +679,26 @@ footer {
     font-size: 40px; } }
 @media only screen and (max-width: 480px) {
   #pandInfoBlok h1 {
-    font-size: 45px; } }
+    font-size: 35px; }
+  #pandInfoBlok img {
+    width: 100%;
+    float: left;
+    padding-bottom: 25px; }
+
+  .huurButton {
+    width: 100%;
+    margin-left: 0px !important; }
+
+  .huurVraagButton {
+    width: 100% !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important; }
+
+  .huurDate {
+    width: 95%; }
+
+  .huurLabel {
+    padding-top: 25px; } }
 #pandZoekBlok {
   margin-top: 30px;
   background-color: #264653;
