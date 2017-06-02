@@ -313,6 +313,12 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 @media only screen and (max-width: 480px) {
   .smallInput {
     width: 100%; } }
+#listCreateAccount {
+  list-style: none;
+  padding: 0; }
+  #listCreateAccount li .error {
+    color: #E85C3A; }
+
 .align-right {
   text-align: right; }
 

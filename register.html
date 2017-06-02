@@ -11,6 +11,8 @@
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link rel="stylesheet" href="assets/liquidslider-master/css/liquid-slider.css">
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>-->
     <meta charset="UTF-8">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registreren - Dynamic City</title>
@@ -46,23 +48,25 @@
             <div class="container" style="padding: 50px 0px;">
                 <div id="introBlock" class="registerBlock col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                     <h2 id="loginHeader">Maak een account</h2>
-                    <form>
-                        <p class="regLabel">Voornaam</p> <input class="smallInput" type="text">
-                        <p class="regLabel">Achternaam</p> <input class="smallInput" type="text">
-                        <p class="regLabel">E-mail adres</p> <input class="smallInput" type="email">
-                        <p class="regLabel">Geboortedatum</p> <input class="smallInput" type="date">
-                        <p class="regLabel">Bedrijfsnaam</p> <input class="smallInput" type="text">
-                        <p class="regLabel">Telefoonnummer</p> <input class="smallInput" type="text">
-                        <p class="regLabel">Postcode</p> <input class="smallInput" type="email">
-                        <p class="regLabel">Productgroep</p> <select class="smallInput" name="productgroep">
-                                                                <option value="Kies een productgroep" disabled selected>Kies een productgroep</option>
-                                                                <option value="ICT">ICT</option>
-                                                                <option value="Sokken">Sokken</option>
-                                                                <option value="Overig">Overig</option>
-                                                            </select>
-                        <p class="regLabel">Wachtwoord</p> <input class="smallInput" type="password">
-                        <p class="regLabel">Wachtwoord</p> <input class="smallInput" type="password">
-                        <input class="button" type="submit" value="Registreren">
+                    <form id="signupForm">
+                        <ul id="listCreateAccount">
+                            <li><p class="regLabel">Voornaam</p> <input class="smallInput" id="firstname" name="firstname" type="text"></li>
+                            <li><p class="regLabel">Achternaam</p> <input class="smallInput" id="lastname" name="lastname" type="text"></li>
+                            <li><p class="regLabel">E-mail adres</p> <input class="smallInput" id="email" name="email" type="email"></li>
+                            <li><p class="regLabel">Geboortedatum</p> <input class="smallInput" type="date"></li>
+                            <li><p class="regLabel">Bedrijfsnaam</p> <input class="smallInput" type="text" placeholder="( Niet verplicht )"></li>
+                            <li><p class="regLabel">Telefoonnummer</p> <input class="smallInput" id="telefoonnummer" name="telefoonnummer" type="text"></li>
+                            <li><p class="regLabel">Postcode</p> <input class="smallInput" id="postcode" name="postcode" type="text"></li>
+                            <li><p class="regLabel">Productgroep</p> <select class="smallInput" name="productgroep"></li>
+                                                                    <option value="Kies een productgroep" disabled selected>Kies een productgroep</option></li>
+                                                                    <option value="ICT">ICT</option>
+                                                                    <option value="Sokken">Sokken</option>
+                                                                    <option value="Overig">Overig</option>
+                                                                </select>
+                            <li><p class="regLabel">Wachtwoord</p> <input class="smallInput" id="password" name="password" type="password"></li>
+                            <li><p class="regLabel">Wachtwoord</p> <input class="smallInput" id="confirm_password" name="confirm_password" type="password"></li>
+                            <input class="button" type="submit" value="Registreren">
+                        </ul>
                     </form>
                 </div>
             </div>
@@ -201,6 +205,69 @@
                     $('#main-slider').liquidSlider();
 
                 </script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/lib/jquery.js"></script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/dist/jquery.validate.js"></script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/dist/additional-methods.js"></script>
+                <script>
+                /*$.validator.setDefaults({
+                    submitHandler: function() {
+                        alert("submitted!");
+                    }
+                });*/
+
+                $().ready(function() {
+                    // validate signup form on keyup and submit
+                    $("#signupForm").validate({
+                        rules: {
+                            firstname: "required",
+                            lastname: "required",
+                            /*username: {
+                                required: true,
+                                minlength: 2
+                            },*/
+                            telefoonnummer: {
+                                required: true,
+                                number: true,
+                                minlength: 10
+                            },
+                            password: {
+                                required: true,
+                                minlength: 8
+                            },
+                            confirm_password: {
+                                required: true,
+                                minlength: 8,
+                                equalTo: "#password"
+                            },
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            postcode: "required",
+                        },
+                        messages: {
+                            firstname: "Vul uw voornaam in",
+                            lastname: "Vul uw achternaam in",
+                            telefoonnummer: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                number: "Uw telefoonnummer mag alleen maar uit cijfers bestaan",
+                                minlength: "Uw telefoonnummer moet 10 tekens langs zijn"
+                            },
+                            password: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                minlength: "Uw wachtwoord moet 8 karakters lang zijn"
+                            },
+                            confirm_password: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                minlength: "Uw wachtwoord moet 8 karakters lang zijn",
+                                equalTo: "Vul het wachtwoord exact het zelfde in"
+                            },
+                            email: "Vul een geldig email adres in",
+                            postcode: "Vul uw postcode in",
+                        }
+                    });
+                });
+            </script>
             </div>
         </div>
     </footer>
