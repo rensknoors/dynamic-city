@@ -168,8 +168,33 @@
 @media only screen and (max-width : 480px) {
     #pandInfoBlok {
         h1 {
-            font-size: 45px;
+            font-size: 35px;
         }
+        
+        img {
+            width: 100%;
+            float: left;
+            padding-bottom: 25px;
+        }
+    }
+    
+    .huurButton {
+        width: 100%;
+        margin-left: 0px !important;
+    }
+        
+    .huurVraagButton {
+        width: 100% !important;
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+    
+    .huurDate {
+        width: 95%;
+    }
+    
+    .huurLabel {
+        padding-top: 25px;
     }
 }
 
