@@ -76,8 +76,6 @@
     #introBlock {
         background-color: $hoofdkleur;
         padding: 90px 40px;
-        /*margin-top: 100px;
-        margin-bottom: 100px;*/
         background-color: rgba(38, 70, 83, 0.85);
         text-align: center;
         min-height: 539px;
@@ -90,6 +88,23 @@
             letter-spacing: 2px;
             margin: 35px 0px 50px 0px;
         }
+        form {
+            .row {
+                width: 100%;
+                margin: 0 auto 5px 0;
+                .regLabel {
+                    width: 40%;
+                }
+                .smallInput {
+                width: 60%;
+                float: left;
+                display: inline-block;
+                padding: 5px !important;
+                    margin: 0 !important;
+                font-size: 12px;
+                }
+            }
+        }
     }
     .registerBlock {
         padding: 20px 40px !important;
@@ -100,6 +115,14 @@
     #introBlock {
         h1 {
             font-size: 48px !important;
+        }
+        form {
+            .row {
+                margin-bottom: 10px !important;
+                p, .smallInput {
+                    width: 100% !important;
+                }
+            }
         }
     }
 }

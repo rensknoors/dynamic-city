@@ -5,9 +5,7 @@
 
 @font-face {
     font-family: RAGE;
-    src: url('../../assets/fonts/RAGE.ttf') format('truetype'),
-        url('../../assets/fonts/RageItalic.eot') format('eot'),
-        url('../../assets/fonts/RageItalic.woff') format('woff'),
+    src: url('../../assets/fonts/RAGE.ttf') format('truetype'), url('../../assets/fonts/RageItalic.eot') format('eot'), url('../../assets/fonts/RageItalic.woff') format('woff'),
 }
 
 @font-face {
@@ -15,8 +13,9 @@
     src: url('../../assets/fonts/TCCEB.tff');
 }
 
-html, body {
-  overflow-x:hidden;
+html,
+body {
+    overflow-x: hidden;
 }
 
 body {
@@ -53,7 +52,6 @@ h2 {
     }
 }
 
-
 button {
     background-color: $steunkleur;
     border: none;
@@ -62,7 +60,6 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    
     i {
         margin-left: -5px !important;
         margin-right: 10px;
@@ -72,7 +69,6 @@ button {
 main {
     .container {
         position: relative;
-
         .btn-row {
             padding-bottom: 30px;
             width: 100%;
@@ -80,7 +76,6 @@ main {
             z-index: 1;
             top: 15px;
             right: 15px;
-
             .btn-add {
                 margin-right: 15px;
             }
@@ -90,35 +85,36 @@ main {
 
 .pandPreviewblok {
     padding-bottom: 25px;
-    
     img {
         width: 100%;
         height: 220px;
         object-fit: cover;
     }
-    
     ul {
         list-style: none;
-        padding: 0;
         background-color: $lichtBlauw !important;
         padding: 27px;
         position: relative;
         overflow: hidden;
-        
+        height: 205px;
+        li {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
         li:first-child {
             font-family: Oswald !important;
             text-transform: uppercase;
             font-size: 25px;
         }
-        
         li:last-child {
             padding-top: 20px;
         }
-        
         .subTitle {
             font-size: 24px;
         }
-        
         .cover {
             position: absolute;
             height: 60px;
@@ -128,17 +124,14 @@ main {
             left: 0;
             transition: bottom 0.25s ease-out;
             background: rgba(38, 70, 83, 0.85);
-            
             .actions {
                 width: 100%;
                 height: 100%;
-                
                 .center {
                     margin: 0 auto;
                     padding: 15px 0;
                     width: 80px;
                 }
-                
                 i {
                     font-size: 24px;
                     color: $wit;
@@ -146,9 +139,8 @@ main {
                     text-align: center;
                     margin: 0 auto;
                 }
-                
                 .deleteFavorite {
-                    padding: 0 30px;   
+                    padding: 0 30px;
                 }
             }
         }
@@ -168,13 +160,7 @@ main {
     height: 800px;
     padding: 100px 0px;
     color: white;
-    background: 
-    linear-gradient(
-      rgba(38, 70, 83, 0.45), 
-      rgba(38, 70, 83, 0.45)
-    ),
-    url('../../assets/images/maasboulevard.png');
-    
+    background: linear-gradient( rgba(38, 70, 83, 0.45), rgba(38, 70, 83, 0.45)), url('../../assets/images/maasboulevard.png');
     h3 {
         font-family: Oswald;
         font-size: 40px;
@@ -192,19 +178,13 @@ main {
     padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 480px) {
-    
-}
+@media only screen and (max-width: 480px) {}
 
-@media only screen and (max-width: 768px) {
-    
-}
+@media only screen and (max-width: 768px) {}
 
-@media only screen and (max-width: 992px) {
-    
-}
+@media only screen and (max-width: 992px) {}
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width: 1200px) {
     .img-width-100 {
         img {
             width: 100%;
@@ -212,35 +192,27 @@ main {
     }
 }
 
-
-
 #nieuwsbriefPopup {
     text-align: center;
-    
     button {
         margin-top: 20px;
     }
-    
     #NBheaderInfo {
         background-color: $hoofdkleur;
         color: $wit;
         height: 100%;
         padding: 20px;
-        
         h4 {
             font-size: 24px;
         }
-        
         p {
             margin-bottom: 20px;
         }
     }
-    
     #NBcontentInfo {
         background-color: $wit;
         padding: 20px;
     }
-    
     #NBinputField {
         background-color: $ultralichtwit;
     }
