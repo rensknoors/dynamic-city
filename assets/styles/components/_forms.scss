@@ -177,11 +177,40 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     float: left;
     display: inline-block;
     line-height: 30px;
+<<<<<<< HEAD
     margin: 0;
+=======
+}
+
+@media only screen and (max-width : 480px) {
+    .regLabel {
+        width: 100%;
+    }
+}
+
+.smallInput {
+    height: 24px !important;
+    width: 60%;
+    float: left;
+    display: inline-block;
+    padding: 5px !important;
+    font-size: 12px;
+>>>>>>> 55d9a25cff089ce988f1188d75f8bbedf54ff936
 }
 
 @media only screen and (max-width : 480px) {
     .smallInput {
         width: 100%;
+    }
+}
+
+#listCreateAccount {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        .error {
+            color: $steunkleur;
+        }
     }
 }
