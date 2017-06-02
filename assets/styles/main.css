@@ -342,40 +342,68 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;
     float: right;
     font-size: 18px !important;
     line-height: 52px !important; }
     #headerNav ul li {
       float: left;
-      padding-left: 22px; }
+      padding: 0 11px;
+      max-height: 52px; }
       #headerNav ul li a {
         color: #264653; }
       #headerNav ul li a:hover {
-        text-decoration: none;
-        border-bottom: 3px solid #E85C3A; }
-      #headerNav ul li img {
-        height: 52px;
-        border-radius: 50%;
-        margin-left: 5px; }
-      #headerNav ul li #userMenu {
-        background-color: white;
-        display: none;
+        text-decoration: none; }
+      #headerNav ul li #userPic {
+        max-height: 52px;
+        max-width: 52px;
+        margin-left: 22px;
         position: absolute;
-        width: 150px;
-        z-index: 2;
+        bottom: 0;
+        right: 0; }
+        #headerNav ul li #userPic img {
+          zoom: 2;
+          display: block;
+          margin: auto;
+          height: auto;
+          max-height: 100%;
+          width: auto;
+          max-width: 100%; }
+      #headerNav ul li #userMenu {
+        display: none; }
+    #headerNav ul #user {
+      background: #E85C3A;
+      color: #fff;
+      padding-right: 52px;
+      width: auto;
+      max-width: 220px;
+      position: relative;
+      cursor: pointer; }
+      #headerNav ul #user p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      #headerNav ul #user #userMenu {
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         box-shadow: 5px 5px 10px #333; }
-        #headerNav ul li #userMenu li {
-          display: inline-block;
-          float: left;
-          font-size: 14px;
+        #headerNav ul #user #userMenu ul {
           width: 100%; }
-        #headerNav ul li #userMenu li:hover {
-          background-color: #E85C3A; }
-          #headerNav ul li #userMenu li:hover a {
-            color: white; }
-    #headerNav ul li:hover #userMenu {
+          #headerNav ul #user #userMenu ul li {
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            width: 100%; }
+          #headerNav ul #user #userMenu ul li:hover a {
+            color: #264653; }
+    #headerNav ul #user:hover #userMenu, #headerNav ul #user:active #userMenu {
       display: block; }
+    #headerNav ul li:hover > a {
+      border-bottom: 3px solid #E85C3A; }
+    #headerNav ul li:last-child {
+      padding-right: 0; }
 
 #schnitzelMenu {
   display: none;
@@ -405,8 +433,8 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
       background: white;
       position: fixed;
       top: 0;
-      right: -200px;
-      width: 200px;
+      right: -250px;
+      width: 250px;
       height: 100vh;
       padding-top: 90px;
       z-index: -1;
@@ -414,7 +442,19 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
       #headerOpmaak #headerNav ul {
         float: none; }
         #headerOpmaak #headerNav ul li {
-          float: none; }
+          float: none;
+          max-height: 52px; }
+        #headerOpmaak #headerNav ul #user {
+          background: #E85C3A;
+          color: white;
+          position: relative;
+          width: 100%; }
+          #headerOpmaak #headerNav ul #user p {
+            max-width: calc(100% - 5px); }
+          #headerOpmaak #headerNav ul #user #userPic {
+            position: absolute;
+            top: 0;
+            right: 0; }
     #headerOpmaak #headerNav.enabled {
       right: 0; }
     #headerOpmaak #schnitzelMenu {

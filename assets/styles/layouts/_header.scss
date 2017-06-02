@@ -26,50 +26,87 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        overflow: hidden;
         float: right;
         font-size: 18px !important;
         line-height: 52px !important;
         li {
             float: left;
-            padding-left: 22px;
+            padding: 0 11px;
+            max-height: 52px;
             a {
                 color: $hoofdkleur;
             }
             a:hover {
                 text-decoration: none;
-                border-bottom: 3px solid $steunkleur;
             }
-            img {
-                height: 52px;
-                border-radius: 50%;
-                margin-left: 5px;
+            #userPic {
+                max-height: 52px;
+                max-width: 52px;
+                margin-left: 22px;
+                
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                img {
+                    zoom: 2;
+                    display: block;
+                    margin: auto;
+                    height: auto;
+                    max-height: 100%;
+                    width: auto;
+                    max-width: 100%;
+                }
+            }
+            #userMenu {
+                display: none;
+            }
+        }
+        #user {
+            background: $steunkleur;
+            color: #fff;
+            padding-right: 52px;
+            width: auto;
+            max-width: 220px;
+            position: relative;
+            cursor: pointer;
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             #userMenu {
                 background-color: white;
-                display: none;
                 position: absolute;
-                width: 150px;
-                z-index: 2;
+                top: 100%;
+                left: 0;
+                width: 100%;
                 box-shadow: 5px 5px 10px #333;
-                li {
-                    display: inline-block;
-                    float: left;
-                    font-size: 14px;
+                ul{
                     width: 100%;
-                }
-                li:hover {
-                    background-color: $steunkleur;
-                    a {
-                        color: white;
+                    li {
+                        display: inline-block;
+                        float: left;
+                        font-size: 14px;
+                        width: 100%;
+                    }
+                    li:hover {
+                        a {
+                            color: $hoofdkleur;
+                        }
                     }
                 }
             }
         }
-        li:hover {
+        #user:hover, #user:active {
             #userMenu {
                 display: block;
             }
+        }
+        li:hover > a {
+            border-bottom: 3px solid $steunkleur;
+        }
+        li:last-child {
+            padding-right: 0;
         }
     }
 }
@@ -95,9 +132,7 @@
     main {
         margin-top: 90px;
     }
-    
     #headerOpmaak {
-//        border-bottom: 2px solid $steunkleur;
         height: 90px;
         width: 100%;
         position: fixed;
@@ -111,8 +146,8 @@
             background: $wit;
             position: fixed;
             top: 0;
-            right: -200px;
-            width: 200px;
+            right: -250px;
+            width: 250px;
             height: 100vh;
             padding-top: 90px;
             z-index: -1;
@@ -121,6 +156,21 @@
                 float: none;
                 li {
                     float: none;
+                    max-height: 52px;
+                }
+                #user {
+                    background: $steunkleur;
+                    color: $wit;
+                    position: relative;
+                    width: 100%;
+                    p {
+                        max-width: calc(100% - 5px);
+                    }
+                    #userPic {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
                 }
             }
         }
