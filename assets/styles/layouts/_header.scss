@@ -62,25 +62,30 @@
             }
         }
         #user {
-            background: $steunkleur;
+            background: $hoofdkleur;
             color: #fff;
-            padding-right: 52px;
+            padding: 0 62px 0 30px;
             width: auto;
             max-width: 220px;
             position: relative;
             cursor: pointer;
+            i {
+                position: absolute;
+                left: 15px;
+                line-height: 52px;
+                transition: transform 0.2s ease-out;
+            }
             p {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
             #userMenu {
-                background-color: white;
+                background-color: $jungleGreen;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                box-shadow: 5px 5px 10px #333;
                 ul{
                     width: 100%;
                     li {
@@ -88,10 +93,15 @@
                         float: left;
                         font-size: 14px;
                         width: 100%;
+                        a {
+                            color: #fff;
+                        }
                     }
                     li:hover {
+                        background: #fff;
                         a {
                             color: $hoofdkleur;
+                            border: none;
                         }
                     }
                 }
@@ -100,6 +110,12 @@
         #user:hover, #user:active {
             #userMenu {
                 display: block;
+            }
+            i.fa-caret-down {
+                -ms-transform: scale(1, -1);
+                -webkit-transform: scale(1, -1);
+                transform: scale(1, -1);
+                transition: transform 0.2s ease-out;
             }
         }
         li:hover > a {
@@ -159,8 +175,6 @@
                     max-height: 52px;
                 }
                 #user {
-                    background: $steunkleur;
-                    color: $wit;
                     position: relative;
                     width: 100%;
                     p {
