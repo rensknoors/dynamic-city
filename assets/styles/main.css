@@ -103,6 +103,8 @@ main .container {
           padding: 0 10px;
           text-align: center;
           margin: 0 auto; }
+        .pandPreviewblok ul .cover .actions .deleteFavorite {
+          padding: 0 30px; }
 
 .pandPreviewblok:hover ul .cover {
   bottom: 0;
