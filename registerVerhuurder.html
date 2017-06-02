@@ -44,16 +44,18 @@
         <div class="container" style="padding: 50px 0px;">
             <div id="introBlock" class="registerBlock col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                 <h2 id="loginHeader">Word verhuurder</h2>
-                <form>
-                    <p class="regLabel">Voornaam</p>        <input class="smallInput"  type="text">
-                    <p class="regLabel">Achternaam</p>      <input class="smallInput" type="text">
-                    <p class="regLabel">E-mail adres</p>    <input class="smallInput" type="email">
-                    <p class="regLabel">Bedrijfsnaam</p>    <input class="smallInput" type="text">
-                    <p class="regLabel">Telefoonnummer</p>  <input class="smallInput" type="text">
-                    <p class="regLabel">Omschrijving</p>        <input class="smallInput" type="text">
-                    <p class="regLabel">Wachtwoord</p>      <input class="smallInput" type="password">
-                    <p class="regLabel">Wachtwoord</p>      <input  class="smallInput"type="password">
-                    <input class="button" type="submit" value="Registreren">
+                <form id="signupForm">
+                    <ul id="listCreateAccount">
+                        <li><p class="regLabel">Voornaam</p>        <input class="smallInput" id="firstname" name="firstname" type="text"><li>
+                        <li><p class="regLabel">Achternaam</p>      <input class="smallInput" id="lastname" name="lastname" type="text"><li>
+                        <li><p class="regLabel">E-mail adres</p>    <input class="smallInput" id="email" name="email" type="email"><li>
+                        <li><p class="regLabel">Bedrijfsnaam</p>    <input class="smallInput" id="bedrijfsnaam" name="bedrijfsnaam" type="text"><li>
+                        <li><p class="regLabel">Telefoonnummer</p>  <input class="smallInput" id="telefoonnummer" name="telefoonnummer" type="text"><li>
+                        <li><p class="regLabel">Omschrijving</p>    <input class="smallInput" id="omschrijving" name="omschrijving" type="text"><li>
+                        <li><p class="regLabel">Wachtwoord</p>      <input class="smallInput" type="password"><li>
+                        <li><p class="regLabel">Wachtwoord</p>      <input  class="smallInput"type="password"></li>
+                        <input class="button" type="submit" value="Registreren">
+                    </ul>
                 </form>
             </div>
         </div>
@@ -96,6 +98,73 @@
                     $('#main-slider').liquidSlider();
 
                 </script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/lib/jquery.js"></script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/dist/jquery.validate.js"></script>
+                <script type="text/javascript" src="assets/jquery-validation-v1.16/dist/additional-methods.js"></script>
+                <script>
+                /*$.validator.setDefaults({
+                    submitHandler: function() {
+                        alert("submitted!");
+                    }
+                });*/
+
+                $().ready(function() {
+                    // validate signup form on keyup and submit
+                    $("#signupForm").validate({
+                        rules: {
+                            firstname: "required",
+                            lastname: "required",
+                            /*username: {
+                                required: true,
+                                minlength: 2
+                            },*/
+                            telefoonnummer: {
+                                required: true,
+                                number: true,
+                                minlength: 10
+                            },
+                            password: {
+                                required: true,
+                                minlength: 8
+                            },
+                            confirm_password: {
+                                required: true,
+                                minlength: 8,
+                                equalTo: "#password"
+                            },
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            bedrijfsnaam: "required",
+                            postcode: "required",
+                            omschrijving: "required",
+                        },
+                        messages: {
+                            firstname: "Vul uw voornaam in",
+                            lastname: "Vul uw achternaam in",
+                            telefoonnummer: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                number: "Uw telefoonnummer mag alleen maar uit cijfers bestaan",
+                                minlength: "Uw telefoonnummer moet 10 tekens langs zijn"
+                            },
+                            password: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                minlength: "Uw wachtwoord moet 8 karakters lang zijn"
+                            },
+                            confirm_password: {
+                                required: "Vul alstublieft een wachtwoord in",
+                                minlength: "Uw wachtwoord moet 8 karakters lang zijn",
+                                equalTo: "Vul het wachtwoord exact het zelfde in"
+                            },
+                            email: "Vul een geldig email adres in",
+                            postcode: "Vul uw postcode in",
+                            bedrijfsnaam: "Vul uw bedrijfsnaam in",
+                            omschrijving: "Vul een omschrijving in",
+                        }
+                    });
+                });
+            </script>
             </div>
         </div>
     </footer>

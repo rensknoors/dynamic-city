@@ -618,7 +618,7 @@ footer {
     margin-bottom: 100px;*/
     background-color: rgba(38, 70, 83, 0.85);
     text-align: center;
-    min-height: 539px; }
+    /*min-height: 539px;*/ }
     #introSection #introBlock h1 {
       font-family: Oswald;
       color: white;
