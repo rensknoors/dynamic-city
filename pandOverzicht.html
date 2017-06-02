@@ -13,11 +13,24 @@
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/custombox-4.0.2/dist/custombox.min.css">
+    <script>
+        window.onload = function() {
+            // Instantiate new modal
+            var modal = new Custombox.modal({
+                content: {
+                    effect: 'fadein',
+                    target: '#nieuwsbriefPopup'
+                }
+            });
+            // Open
+            modal.open();
+        }
+    </script>
     <title>Pand overzicht - Dynamic City</title>
 </head>
 
 <body>
-
     <!-- Header -->
     <header id="headerOpmaak">
         <div class="container">
@@ -108,6 +121,23 @@
                 </div>
             </div>
         </section>
+        <div id="nieuwsbriefPopup" style="display: none;">
+            <div class="container">
+                <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                    <div id="NBheaderInfo">
+                        <button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+                        <!--<img id="NBlogo" src="assets/images/chameleon-wit.png">-->
+                        <h4>Geen pand binnen in uw regio beschikbaar?</h4>
+                        <h5>Meld je aan voor onze nieuwsbrief!</h5>
+                    </div>
+                    <div id="NBcontentInfo">
+                        <p>Door u aan te melden voor onze nieuwsbrief zult u op de hoogte gehouden worden van alle ontwikkelingen omtrent Dynamic-City. Indien er extra panden beschikbaar worden binnen uw regio, dan zullen we u daarvan op de hoogte houden d.m.v. onze nieuwsbrief.</p>
+                        <input id="NBinputField" placeholder="E-mail" type="text">
+                        <button type="button">Aanmelden</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -141,10 +171,11 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
                 <script src="assets/liquidslider-master/js/jquery.liquid-slider.min.js"></script>
+                <script src="assets/custombox-4.0.2/dist/custombox.min.js"></script>
+                <script src="assets/custombox-4.0.2/dist/custombox.legacy.min.js"></script>
                 <script src="js/schnitzelMenu.js"></script>
                 <script>
                     $('#main-slider').liquidSlider();
-
                 </script>
             </div>
         </div>

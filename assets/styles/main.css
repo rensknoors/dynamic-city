@@ -130,6 +130,25 @@ main .container {
 @media only screen and (max-width: 1200px) {
   .img-width-100 img {
     width: 100%; } }
+#nieuwsbriefPopup {
+  text-align: center; }
+  #nieuwsbriefPopup button {
+    margin-top: 20px; }
+  #nieuwsbriefPopup #NBheaderInfo {
+    background-color: #264653;
+    color: white;
+    height: 100%;
+    padding: 20px; }
+    #nieuwsbriefPopup #NBheaderInfo h4 {
+      font-size: 24px; }
+    #nieuwsbriefPopup #NBheaderInfo p {
+      margin-bottom: 20px; }
+  #nieuwsbriefPopup #NBcontentInfo {
+    background-color: white;
+    padding: 20px; }
+  #nieuwsbriefPopup #NBinputField {
+    background-color: #f7f7f7; }
+
 input,
 select,
 option {
@@ -656,7 +675,8 @@ footer {
   list-style: none;
   padding: 70px 15px 15px 15px;
   color: white;
-  display: flex; }
+  /*display: flex;*/
+  display: none; }
   #pandenStats li {
     width: 25%;
     margin: 0;

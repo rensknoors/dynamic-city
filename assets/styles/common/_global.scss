@@ -207,3 +207,37 @@ main {
         }
     }
 }
+
+
+
+#nieuwsbriefPopup {
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+    }
+    
+    #NBheaderInfo {
+        background-color: $hoofdkleur;
+        color: $wit;
+        height: 100%;
+        padding: 20px;
+        
+        h4 {
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    
+    #NBcontentInfo {
+        background-color: $wit;
+        padding: 20px;
+    }
+    
+    #NBinputField {
+        background-color: $ultralichtwit;
+    }
+}
