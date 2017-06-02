@@ -304,6 +304,9 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
   display: inline-block;
   line-height: 30px; }
 
+@media only screen and (max-width: 480px) {
+  .regLabel {
+    width: 100%; } }
 .smallInput {
   height: 24px !important;
   width: 60%;
@@ -315,6 +318,12 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 @media only screen and (max-width: 480px) {
   .smallInput {
     width: 100%; } }
+#listCreateAccount {
+  list-style: none;
+  padding: 0; }
+  #listCreateAccount li .error {
+    color: #E85C3A; }
+
 .align-right {
   text-align: right; }
 
@@ -375,23 +384,26 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     #headerNav ul #user {
       background: #264653;
       color: #fff;
-      padding-right: 52px;
+      padding: 0 62px 0 30px;
       width: auto;
       max-width: 220px;
       position: relative;
       cursor: pointer; }
+      #headerNav ul #user i {
+        position: absolute;
+        left: 15px;
+        line-height: 52px;
+        transition: transform 0.2s ease-out; }
       #headerNav ul #user p {
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
-        padding-right: 10px; }
+        white-space: nowrap; }
       #headerNav ul #user #userMenu {
-        background-color: white;
+        background-color: #2A9D8F;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        box-shadow: 5px 5px 10px #333; }
+        width: 100%; }
         #headerNav ul #user #userMenu ul {
           width: 100%; }
           #headerNav ul #user #userMenu ul li {
@@ -399,10 +411,20 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
             float: left;
             font-size: 14px;
             width: 100%; }
-          #headerNav ul #user #userMenu ul li:hover a {
-            color: #264653; }
+            #headerNav ul #user #userMenu ul li a {
+              color: #fff; }
+          #headerNav ul #user #userMenu ul li:hover {
+            background: #fff; }
+            #headerNav ul #user #userMenu ul li:hover a {
+              color: #264653;
+              border: none; }
     #headerNav ul #user:hover #userMenu, #headerNav ul #user:active #userMenu {
       display: block; }
+    #headerNav ul #user:hover i.fa-caret-down, #headerNav ul #user:active i.fa-caret-down {
+      -ms-transform: scale(1, -1);
+      -webkit-transform: scale(1, -1);
+      transform: scale(1, -1);
+      transition: transform 0.2s ease-out; }
     #headerNav ul li:hover > a {
       border-bottom: 3px solid #E85C3A; }
     #headerNav ul li:last-child {
@@ -448,8 +470,6 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
           float: none;
           max-height: 52px; }
         #headerOpmaak #headerNav ul #user {
-          background: #E85C3A;
-          color: white;
           position: relative;
           width: 100%; }
           #headerOpmaak #headerNav ul #user p {
@@ -601,7 +621,7 @@ footer {
     margin-bottom: 100px;*/
     background-color: rgba(38, 70, 83, 0.85);
     text-align: center;
-    min-height: 539px; }
+    /*min-height: 539px;*/ }
     #introSection #introBlock h1 {
       font-family: Oswald;
       color: white;
