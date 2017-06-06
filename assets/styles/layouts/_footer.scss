@@ -26,6 +26,21 @@ footer {
     
     li {
         text-align: left;
+		
+		a {
+			color: white;
+			text-decoration: none;
+			-webkit-transition: color 0.4s; /* Safari */
+			transition: color 0.4s;
+		}
+		
+		a:hover {
+			color: $jungleGreen;
+			
+			i.social {
+				color: white;
+			}
+		}
     }
     
     i.adres {

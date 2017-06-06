@@ -524,6 +524,16 @@ footer {
   min-width: 190px; }
   .footerMenu li {
     text-align: left; }
+    .footerMenu li a {
+      color: white;
+      text-decoration: none;
+      -webkit-transition: color 0.4s;
+      /* Safari */
+      transition: color 0.4s; }
+    .footerMenu li a:hover {
+      color: #2A9D8F; }
+      .footerMenu li a:hover i.social {
+        color: white; }
   .footerMenu i.adres {
     margin-right: 5px;
     display: inline-block;
