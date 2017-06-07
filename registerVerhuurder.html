@@ -44,38 +44,38 @@
         <div class="container" style="padding: 50px 0px;">
             <div id="introBlock" class="registerBlock col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                 <h2 id="loginHeader">Word verhuurder</h2>
-                <form>
+                <form id="signupForm">
                     <div class="row">
-                        <p class="regLabel">Voornaam</p>
-                        <input class="smallInput" type="text">
+                        <p class="regLabel">Voornaam*</p>
+                        <input name="firstname" class="smallInput" type="text">
                     </div>
                     <div class="row">
-                        <p class="regLabel">Achternaam</p>
-                        <input class="smallInput" type="text">
+                        <p class="regLabel">Achternaam*</p>
+                        <input name="lastname" class="smallInput" type="text">
                     </div>
                     <div class="row">
-                        <p class="regLabel">E-mail adres</p>
-                        <input class="smallInput" type="email">
+                        <p class="regLabel">E-mail adres*</p>
+                        <input name="email" class="smallInput" type="email">
                     </div>
                     <div class="row">
                         <p class="regLabel">Bedrijfsnaam</p>
-                        <input class="smallInput" type="text">
+                        <input name="bedrijfsnaam" id="bedrijfsnaam" class="smallInput" type="text">
                     </div>
                     <div class="row">
-                        <p class="regLabel">Telefoonnummer</p>
-                        <input class="smallInput" type="text">
+                        <p class="regLabel">Telefoonnummer*</p>
+                        <input name="telefoonnummer" id="telefoonnummer" class="smallInput" type="text">
                     </div>
                     <div class="row">
-                        <p class="regLabel">Omschrijving</p>
-                        <input class="smallInput" type="text">
+                        <p class="regLabel">Omschrijving*</p>
+                        <input name="omschrijving" class="smallInput" type="text">
                     </div>
                     <div class="row">
-                        <p class="regLabel">Wachtwoord</p>
-                        <input class="smallInput" type="password">
+                        <p class="regLabel">Wachtwoord*</p>
+                        <input name="password" class="smallInput" type="password">
                     </div>
                     <div class="row">
-                        <p class="regLabel">Wachtwoord</p><input  class="smallInput"type="password">
-                        <input class="button" type="submit" value="Registreren">
+                        <p class="regLabel">Wachtwoord*</p><input  class="smallInput"type="password">
+                        <input name="confirm_password" class="button" type="submit" value="Registreren">
                     </div>
                 </form>
             </div>
