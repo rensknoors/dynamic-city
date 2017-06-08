@@ -163,6 +163,26 @@ main .container {
   #nieuwsbriefPopup #NBinputField {
     background-color: #f7f7f7; }
 
+.persoonlijkeLijst {
+  list-style: none;
+  padding: 10px 0px; }
+  .persoonlijkeLijst h3 {
+    text-align: center; }
+  .persoonlijkeLijst h3:after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    display: block;
+    background-color: #264653;
+    /* margin-top: 10px; */
+    /* text-align: center; */
+    margin: 15px auto;
+    padding-top: 8px; }
+  .persoonlijkeLijst li:first-child {
+    padding: 0px; }
+  .persoonlijkeLijst li {
+    padding: 8px 0px; }
+
 input,
 select,
 option {
@@ -844,7 +864,12 @@ footer {
     padding-bottom: 20px; }
 
 .overPreview {
-  background-image: url(../../assets/images/hobbyachtergrond.jpg); }
+  background-image: url(../../assets/images/hobbyachtergrond.jpg);
+  background: linear-gradient(rgba(38, 70, 83, 0.45), rgba(38, 70, 83, 0.45)), url("../../assets/images/hobbyachtergrond.jpg"); }
+  .overPreview h2 {
+    color: white; }
+  .overPreview p {
+    color: white; }
 
 #firstname-error {
   color: white; }
