@@ -362,6 +362,15 @@
 
 .overPreview {
     background-image: url(../../assets/images/hobbyachtergrond.jpg);
+    background: linear-gradient( rgba(38, 70, 83, 0.45), rgba(38, 70, 83, 0.45)), url('../../assets/images/hobbyachtergrond.jpg');
+    
+    h2 {
+        color: white;
+    }
+    
+    p {
+        color: white;
+    }
 }
 
 #firstname-error {
