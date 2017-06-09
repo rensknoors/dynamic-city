@@ -8,3 +8,10 @@ $hansaYellow : #E9C46A;
 $sandyBrown : #F49D55;
 $lichtBlauw : #e9f5f4;
 $ultralichtwit: #f7f7f7;
+
+// Custom bootstrap
+.equal {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
