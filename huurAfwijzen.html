@@ -51,41 +51,13 @@
         <section id="introSection" style="background-image: none !important;">
             <div class="container" style="padding: 50px 0px;">
                 <div id="pandInfoBlok" class="col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
-                    <table id="huurAfsprakenTabel">
-                        <tr>
-                            <th>Naam</th>
-                            <th>Pand adres</th>
-                            <th>Begin</th>
-                            <th>Eind</th>
-                            <th>Aantal plekken</th>
-                            <th>Bedrag</th>
-                            <th>Goedgekeurd</th>
-                        </tr>
-                        @for ($i = 0; $i < count($huurAfspraaken); $i++)
-                        <tr>
-                            <td>{{ $huurders[$i]["attributes"]["huurder_Voornaam"] }} {{ $huurders[$i]["attributes"]["huurder_Achternaam"]  }}</td>
-                            <td>{{ $panden[$i]["attributes"]["straat"]}}
-                                / {{ $panden[$i]["attributes"]["stad"]}}
-                                / {{ $panden[$i]["attributes"]["postcode"]}}</td>
-                            <td>{{ $huurAfspraaken[$i]->startDatum }}</td>
-                            <td>{{ $huurAfspraaken[$i]->eindDatum }}</td>
-                            <td>{{ $huurAfspraaken[$i]->aantalPlekken}}</td>
-                            <td>&euro;{{ $huurAfspraaken[$i]->prijs}}</td>
-                            @if($huurAfspraaken[$i]->geaccepteerd == 0)
-                            <td>
-                                <a href="/verhuurder/accepteer/huurafspraak/{{$huurAfspraaken[$i]->huurder_ID}}/{{$huurAfspraaken[$i]->idPand}}">
-                                    <button class="goedkeurBtn">Goedkeuren</button>
-                                </a>
-                                <a href="/verhuurder/afwijzen/huurafspraak/{{$huurAfspraaken[$i]->huurder_ID}}/{{$huurAfspraaken[$i]->idPand}}">
-                                    <button class="afkeurBtn">Afkeuren</button>
-                                </a>
-                            </td>
-                            @else
-                            <td>Goedgekeurd</td>
-                            @endif
-                        </tr>
-                        @endfor
-                    </table>
+                    <h3>Afspraak afwijzen</h3>
+                    <form action="/pand/{{ $pandInfo[" idPand "] }}/stelvraag" method="post">
+                        {{ csrf_field() }}
+                        <textarea id="afwijsText" name="Vraag">
+                                </textarea>
+                        <input class="afwijsButton" type="submit" value="Verstuur Bericht">
+                    </form>
                 </div>
             </div>
         </section>
@@ -96,7 +68,7 @@
                         <div id="vraagPopup">
                             <a href="#" class="cancel"><i class="fa fa-close"></i></a>
                             <h3>Stel een vraag</h3>
-                            <form action="/pand/{{ $pandInfo["idPand"] }}/stelvraag" method="post">
+                            <form action="/pand/{{ $pandInfo[" idPand "] }}/stelvraag" method="post">
                                 {{ csrf_field() }}
                                 <input type="email" placeholder="E-mailadres" name="gebruikerEmail">
                                 <textarea id="vraagText" name="Vraag">
