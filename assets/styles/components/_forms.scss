@@ -10,10 +10,12 @@ option {
     display: inline-block;
     width: 90%;
 }
+
 input[type=file] {
     background-color: white;
     height: 30px !important;
 }
+
 
 /** Datepicker **/
 
@@ -74,14 +76,13 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     font-size: 14px;
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
     .zoekPlaats {
         width: 97% !important;
         float: left;
         margin-right: 0 !important;
         margin-left: 0px !important;
     }
-    
     .zoekButton {
         width: 97% !important;
         margin-left: 0px !important;
@@ -120,11 +121,12 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     background-color: lightgrey;
 }
 
-.huurData button{
+.huurData button {
     height: 59px;
 }
-.huurData li:last-child{
-    text-align:right;
+
+.huurData li:last-child {
+    text-align: right;
 }
 
 .inputDesc {
@@ -180,7 +182,49 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     margin: 0;
 }
 
-@media only screen and (max-width : 480px) {
+
+/**Afsprakentabel**/
+
+#huurAfsprakenTabel {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    color: white;
+    th {
+        text-align: center; 
+    }
+    td{
+        text-align: center;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        padding: 5px;
+    }
+    
+    td:last-child {
+        border-right: 1px solid white;
+    }
+    tr:last-child {
+        border-bottom: 1px solid white;
+    }
+    .goedkeurBtn {
+        background-color: $jungleGreen !important;
+        height: 20px;
+        width: 100px;
+        padding: 0px;
+        line-height: 20px !important;
+        margin-right: 5px;
+    }
+    .afkeurBtn {
+        height: 20px;
+        width: 100px;
+        padding: 0px;
+        line-height: 20px !important;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .regLabel {
         width: 100%;
     }
@@ -195,7 +239,7 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     font-size: 12px;
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
     .smallInput {
         width: 100%;
     }
@@ -204,7 +248,6 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
 #listCreateAccount {
     list-style: none;
     padding: 0;
-    
     li {
         .error {
             color: $steunkleur;

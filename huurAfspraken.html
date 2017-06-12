@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Project CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+    <!-- Bootstrap -->
+    <link integrity="" rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link integrity="" rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css">
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/liquidslider-master/css/liquid-slider.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pand info - Dynamic City</title>
+
+    <!--  MOET IN DE HEADER!  -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="headerOpmaak">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <a href="index.html"><img id="headerLogo" src="assets/images/chameleon-blue-txt.svg" alt="Dynamic City Logo"></a>
+                </div>
+                <nav id="headerNav" class="col-md-9 col-sm-9 col-xs-12">
+                    <ul>
+                        <li><a href="pandOverzicht.html">Ruimtes</a></li>
+                        <li><a href="registerVerhuurder.html">Word Verhuurder</a></li>
+                        <li><a href="register.html">Aanmelden</a></li>
+                        <li><button id="loginButton"><a href="login.html">Inloggen</a></button></li>
+                    </ul>
+                </nav>
+                <nav id="schnitzelMenu" class="right closed">
+                    <img src="assets/images/icons/schnitzel.svg" alt="schnitzel">
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="pandBackground">
+            <img src="assets/images/venlo.png">
+        </div>
+        <section id="introSection" style="background-image: none !important;">
+            <div class="container" style="padding: 50px 0px;">
+                <div id="pandInfoBlok" class="col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+                    <table id="huurAfsprakenTabel">
+                        <tr>
+                            <th>Naam</th>
+                            <th>Pand adres</th>
+                            <th>Begin</th>
+                            <th>Eind</th>
+                            <th>Aantal plekken</th>
+                            <th>Bedrag</th>
+                            <th>Goedgekeurd</th>
+                        </tr>
+                        @for ($i = 0; $i < count($huurAfspraaken); $i++)
+                        <tr>
+                            <td>{{ $huurders[$i]["attributes"]["huurder_Voornaam"] }} {{ $huurders[$i]["attributes"]["huurder_Achternaam"]  }}</td>
+                            <td>{{ $panden[$i]["attributes"]["straat"]}}
+                                / {{ $panden[$i]["attributes"]["stad"]}}
+                                / {{ $panden[$i]["attributes"]["postcode"]}}</td>
+                            <td>{{ $huurAfspraaken[$i]->startDatum }}</td>
+                            <td>{{ $huurAfspraaken[$i]->eindDatum }}</td>
+                            <td>{{ $huurAfspraaken[$i]->aantalPlekken}}</td>
+                            <td>&euro;{{ $huurAfspraaken[$i]->prijs}}</td>
+                            @if($huurAfspraaken[$i]->geaccepteerd == 0)
+                            <td>
+                                <a href="/verhuurder/accepteer/huurafspraak/{{$huurAfspraaken[$i]->huurder_ID}}/{{$huurAfspraaken[$i]->idPand}}">
+                                    <button class="goedkeurBtn">Goedkeuren</button>
+                                </a>
+                                <a href="/verhuurder/afwijzen/huurafspraak/{{$huurAfspraaken[$i]->huurder_ID}}/{{$huurAfspraaken[$i]->idPand}}">
+                                    <button class="afkeurBtn">Afkeuren</button>
+                                </a>
+                            </td>
+                            @else
+                            <td>Goedgekeurd</td>
+                            @endif
+                        </tr>
+                        @endfor
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="sectionMargin">
+            <div class="container">
+                <div class="row">
+                    <div class="padding-bottom-25 col-md-5 col-sm-8 col-xs-12">
+                        <div id="vraagPopup">
+                            <a href="#" class="cancel"><i class="fa fa-close"></i></a>
+                            <h3>Stel een vraag</h3>
+                            <form>
+                                <input type="email" placeholder="E-mailadres">
+                                <textarea id="vraagText">
+                                </textarea>
+                                <input class="huurVraagButton" type="submit" value="Verstuur vraag">
+                            </form>
+                        </div>
+                        <div id="cover"> </div>
+                        <h2 class="pandInfoH2">Interesse? Maak dan snel een afspraak!</h2>
+                        <form>
+                            <label class="huurLabel">Start huurperiode</label>
+                            <input class="huurDate" name="eindDatum" type="date">
+                            <label class="huurLabel">Eind huurperiode</label>
+                            <input class="huurDate" name="eindDatum" type="date">
+                            <input type="checkbox" id="checkbox2" class="css-checkbox" checked="checked" />
+                            <label for="checkbox2" name="checkbox2_lbl" class="css-label lite-orange-check">Ik ga akkoord met de <a href="voorwaarden.html">voorwaarden</a> van Dynamic City.</label>
+                            <!--                            <div class="g-recaptcha" data-sitekey="6LcUpSQUAAAAAIzHHxoPE8MFgGe_PXvDaEIvq0g8"></div>-->
+                            <input class="huurButton" type="submit" value="Huur dit pand!">
+                        </form>
+                        <a href="#vraagPopup"><button class="huurVraagButton">Stel een vraag</button></a>
+
+                    </div>
+                    <figure class="align-right col-md-offset-1 col-md-6 col-sm-8 col-xs-12"><img src="assets/images/afbeeldingpand.png"></figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+                <h2 class="text-center">Dynamic-city</h2>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+                        <ul class="footerMenu">
+                            <li>Contact</li>
+                            <li><i class="adres fa fa-home"></i>Rachelsmolen 1</li>
+                            <li><i class="adres"></i>5612 MA, Eindhoven</li>
+                            <li><i class="adres fa fa-envelope"></i>projectobbi@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="mobileFooterPadding col-md-4 col-sm-4 col-xs-12 text-center">
+                        <ul class="footerMenu">
+                            <li>Social media</li>
+                            <li><a href="https://www.facebook.com/DynamicCityNL" target="_blank"><i class="social fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/dynamic_cityNL" target="_blank"><i class="social fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/dynamic-city-aa08a7144/" target="_blank"><i class="social fa fa-linkedin"></i></a></li>
+                            <li><a href="https://nl.pinterest.com/dynamiccity0274/" target="_blank"><i class="social fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+                        <ul class="footerMenu">
+                            <li>Menu</li>
+                            <li><a href="http://dynamic-city.nl/panden/overzicht">Ruimtes</a></li>
+                            <li><a href="http://dynamic-city.nl/verhuurder/registratie">Word verhuurder</a></li>
+                            <li><a href="http://dynamic-city.nl/huurder/registratie">Aanmelden</a></li>
+                            <li><a href="http://dynamic-city.nl/huurder/inloggen">Inloggen</a></li>
+                            <li><a href="http://dynamic-city.nl/info">Info</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+                <script src="assets/liquidslider-master/js/jquery.liquid-slider.min.js"></script>
+                <script src="assets/js/schnitzelMenu.js"></script>
+                <script>
+                    $('#main-slider').liquidSlider();
+
+                </script>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

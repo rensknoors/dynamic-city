@@ -341,6 +341,38 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
   line-height: 30px;
   margin: 0; }
 
+/**Afsprakentabel**/
+#huurAfsprakenTabel {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 90%;
+  color: white; }
+  #huurAfsprakenTabel th {
+    text-align: center; }
+  #huurAfsprakenTabel td {
+    text-align: center;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    padding: 5px; }
+  #huurAfsprakenTabel td:last-child {
+    border-right: 1px solid white; }
+  #huurAfsprakenTabel tr:last-child {
+    border-bottom: 1px solid white; }
+  #huurAfsprakenTabel .goedkeurBtn {
+    background-color: #2A9D8F !important;
+    height: 20px;
+    width: 100px;
+    padding: 0px;
+    line-height: 20px !important;
+    margin-right: 5px; }
+  #huurAfsprakenTabel .afkeurBtn {
+    height: 20px;
+    width: 100px;
+    padding: 0px;
+    line-height: 20px !important;
+    margin-right: 5px; }
+
 @media only screen and (max-width: 480px) {
   .regLabel {
     width: 100%; } }
