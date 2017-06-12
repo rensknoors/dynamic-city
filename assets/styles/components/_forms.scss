@@ -182,7 +182,21 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
     margin: 0;
 }
 
+/**Afwijsform**/
+#afwijsText{   
+    width: 50%;
+    height: 10em;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 
+}
+
+.afwijsButton{
+    background-color: $steunkleur;
+    color: white !important;
+    width: 50%;
+}
 /**Afsprakentabel**/
 
 #huurAfsprakenTabel {
