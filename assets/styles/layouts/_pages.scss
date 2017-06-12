@@ -113,18 +113,17 @@
 
 .profileSection.omslag {
     height: 294px;
-    background: url(http://unsplash.it/1920/1080/) center center/cover;
+    background: url(http://unsplash.it/1920/1080/?blur) center center/cover;
 }
 
-.profileSection {
-    min-height: 128px;
+.profileSection.headline {
+    min-height: 85px;
+    border-bottom: 1px solid #eee;
     .container {
         .row {
-            
-        }
-        .row.headline {
             position: absolute;
             top: calc(-168px/2);
+            left: 15px;
             width: 100%;
             .profilePic {
                 width: 168px;
@@ -136,6 +135,7 @@
             .buttonBar {
                 position: absolute;
                 top: calc(168px/2);
+                left: 0;
                 padding: 16px;
                 padding-left: 200px;
                 width: 100%;
@@ -145,6 +145,7 @@
                 .profileName {
                     font-size: 28px;
                     vertical-align: bottom;
+                    color: $hoofdkleur;
                 }
                 .group {
                     margin-left: auto;
@@ -163,6 +164,84 @@
     }
 }
 
+.profileSection {
+    min-height: 84px;
+    .container {
+        .row {
+            .description {
+                padding: 20px 15px;
+                color: #999;
+            }
+            div {
+                table {
+                    tr {
+                        td:first-child {
+                            color: $hoofdkleur;
+                            font-weight: bold;
+                        }
+                        td {
+                            width: 50%;
+                            line-height: 28px;
+                            color: $jungleGreen;
+                        }
+                    }
+                }
+                table.album {
+                    tr {
+                        td {
+                            width: calc(100%/5);
+                            height: auto;
+                            border: 4px solid $wit;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row {
+            .social {
+                padding: 20px 20px 40px;
+                font-size: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    padding: 0 20px;
+                    color: $steunkleur;
+                    transition: color 0.2s;
+                }
+                a:hover {
+                    color: $sandyBrown;
+                    transition: color 0.2s;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .profileSection.omslag {
+        height: 210px;
+    }
+    
+    .profileSection {
+        .container {
+            .row {
+                margin: 0 !important;
+                .buttonBar {
+                    .group {
+                        position: absolute;
+                        top: -70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width : 480px) {
     #introBlock {
         h1 {
@@ -173,6 +252,60 @@
                 margin-bottom: 10px !important;
                 p, .smallInput {
                     width: 100% !important;
+                }
+            }
+        }
+    }
+    
+    .profileSection.omslag {
+        display: none;
+    }
+    
+    .profileSection.headline {
+        .container {
+            .row {
+                position: relative;
+                top: 0;
+                float: left;
+                .buttonBar {
+                    padding-left: 180px;
+                    top: 0;
+                    .profileName .group {
+                        display: block;
+                        width: 100%;
+                        float: left;
+                    }
+                    .group {
+                        top: 110px;
+                        button {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 50px;
+                            i {
+                                text-indent: -28px;
+                                white-space: nowrap;
+                                overflow: visible;
+                                margin-right: 60px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .profileSection {
+        .container {
+            .row {
+                margin: 0 !important;
+                .buttonBar {
+                    .group {
+                        position: absolute;
+                        top: -70px;
+                    }
                 }
             }
         }
