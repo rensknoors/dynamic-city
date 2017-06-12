@@ -96,27 +96,14 @@
                         <div id="vraagPopup">
                             <a href="#" class="cancel"><i class="fa fa-close"></i></a>
                             <h3>Stel een vraag</h3>
-                            <form>
-                                <input type="email" placeholder="E-mailadres">
-                                <textarea id="vraagText">
+                            <form action="/pand/{{ $pandInfo["idPand"] }}/stelvraag" method="post">
+                                {{ csrf_field() }}
+                                <input type="email" placeholder="E-mailadres" name="gebruikerEmail">
+                                <textarea id="vraagText" name="Vraag">
                                 </textarea>
                                 <input class="huurVraagButton" type="submit" value="Verstuur vraag">
                             </form>
                         </div>
-                        <div id="cover"> </div>
-                        <h2 class="pandInfoH2">Interesse? Maak dan snel een afspraak!</h2>
-                        <form>
-                            <label class="huurLabel">Start huurperiode</label>
-                            <input class="huurDate" name="eindDatum" type="date">
-                            <label class="huurLabel">Eind huurperiode</label>
-                            <input class="huurDate" name="eindDatum" type="date">
-                            <input type="checkbox" id="checkbox2" class="css-checkbox" checked="checked" />
-                            <label for="checkbox2" name="checkbox2_lbl" class="css-label lite-orange-check">Ik ga akkoord met de <a href="voorwaarden.html">voorwaarden</a> van Dynamic City.</label>
-                            <!--                            <div class="g-recaptcha" data-sitekey="6LcUpSQUAAAAAIzHHxoPE8MFgGe_PXvDaEIvq0g8"></div>-->
-                            <input class="huurButton" type="submit" value="Huur dit pand!">
-                        </form>
-                        <a href="#vraagPopup"><button class="huurVraagButton">Stel een vraag</button></a>
-
                     </div>
                     <figure class="align-right col-md-offset-1 col-md-6 col-sm-8 col-xs-12"><img src="assets/images/afbeeldingpand.png"></figure>
                 </div>
